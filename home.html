@@ -6,7 +6,9 @@
 				//alert('hi');
 				document.getElementById("buttonContainer").style.transition = "all 2s";
 				document.getElementById("buttonContainer").style.opacity = "0";
-				document.getElementById("total").parentNode.removeChild(document.getElementById("total"));
+				setTimeout(function () {
+					document.body.removeChild(document.getElementById("total"));
+			    }, 2000);
 			}
 		</script>
 		<!--Import Google Icon Font-->
