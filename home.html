@@ -6,6 +6,7 @@
 				//alert('hi');
 				document.getElementById("buttonContainer").style.transition = "all 2s";
 				document.getElementById("buttonContainer").style.opacity = "0";
+				document.getElementById("total").parentNode.removeChild(document.getElementById("total"));
 			}
 		</script>
 		<!--Import Google Icon Font-->
@@ -73,7 +74,7 @@
 		</div>
 
 		<!-- Replacement for old button --> 
-		<div class="row">
+		<div id="total" class="row">
 			<div class="col s12 m6">
 				<div id="buttonContainer" class="card grey darken-4">
 					<div class="card-content white-text">
