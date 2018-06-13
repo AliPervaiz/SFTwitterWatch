@@ -26,7 +26,7 @@ for q in queries:
 def removeResponded(): #removes URLs listed in respondedurls.txt
     respondedURLs = open(respondedurls, "r")
     for tempURL in respondedURLs:
-        urls:.remove(tempURL)
+        urls.remove(tempURL)
 
 j = "{\"urls\": [\"" +  "\", \"".join(urls) + "\"]}"
 print(j)
