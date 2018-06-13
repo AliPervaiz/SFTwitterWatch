@@ -26,7 +26,7 @@ for q in queries:
 def removeResponded():
     respondedIDs = open(responded, "r")
     for tempID in respondedIDs:
-        ids.remove(tempID)
+        urls.remove(tempID)
 
 j = "{\"urls\": [\"" +  "\", \"".join(urls) + "\"]}"
 print(j)
