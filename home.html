@@ -1,5 +1,13 @@
 <html>
 	<head>
+		<script>
+			function hello()
+			{
+				//alert('hi');
+				document.getElementById("buttonContainer").style.transition = "all 2s";
+				document.getElementById("buttonContainer").style.opacity = "0";
+			}
+		</script>
 		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--Import materialize.css-->
@@ -67,14 +75,14 @@
 		<!-- Replacement for old button --> 
 		<div class="row">
 			<div class="col s12 m6">
-				<div class="card grey darken-4">
+				<div id="buttonContainer" class="card grey darken-4">
 					<div class="card-content white-text">
             <img style="opacity:1; display:block; margin-left:auto; margin-right:auto;" width="60%" src="statefarm.png">
             <p style="opacity:0">.</p>
             <p style="opacity:0">.</p>
             <p style="opacity:0">.</p>
 						<div class="card-action center-align">
-							<a class="waves-effect red darken-3 btn" style="opacity:2" href="#">Press me to begin</a>
+							<a onclick="hello()" class="waves-effect red darken-3 btn" style="opacity:2" href="#">Press me to begin!</a>
 						</div>
 					</div>
 				</div>
