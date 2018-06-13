@@ -65,7 +65,13 @@
       }
       #secondaryCardRow{
         margin-top:15px;
-      }
+			}
+			#tweetCard{
+				position:absolute;
+				top:110%;
+				left:35%;
+
+			}
 		</style>
 	</head>
 	<body>
@@ -109,35 +115,22 @@
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           
       </div>
-    </div> -->
-    <!-- Main Content Card -->
-    <div id="content-card-container">
-        <div id="secondaryCardRow" class="row valign-wrapper">
-          <div class="col s12 m6 offset-m3" style="margin-top:50%">
-            <div class="card">
-              <div class="card-content">
-                <span class="card-title center" v-if="title">Information</span>
-                <slot></slot>
-                <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">This has no secret message. <a href="https://t.co/pRUqbmyDtj">pic.twitter.com/pRUqbmyDtj</a></p>&mdash; Rick and Morty (@RickandMorty) <a href="https://twitter.com/RickandMorty/status/1006930990013517825?ref_src=twsrc%5Etfw">June 13, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">This has no secret message. <a href="https://t.co/pRUqbmyDtj">pic.twitter.com/pRUqbmyDtj</a></p>&mdash; Rick and Morty (@RickandMorty) <a href="https://twitter.com/RickandMorty/status/1006930990013517825?ref_src=twsrc%5Etfw">June 13, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">This has no secret message. <a href="https://t.co/pRUqbmyDtj">pic.twitter.com/pRUqbmyDtj</a></p>&mdash; Rick and Morty (@RickandMorty) <a href="https://twitter.com/RickandMorty/status/1006930990013517825?ref_src=twsrc%5Etfw">June 13, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">As <a href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">@NASA</a> searches for life on Mars, we lose the life of beloved Anthony Bourdain on Earth. Implicit and explicit reminders of how precious life is, anywhere in the universe.</p>&mdash; Neil deGrasse Tyson (@neiltyson) <a href="https://twitter.com/neiltyson/status/1005073555489460224?ref_src=twsrc%5Etfw">June 8, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+		</div> -->
+		<!-- Tweet Card -->
+		<div class="row" id="tweetCard">
+					<div class="card z-depth-0 white col s16 m16">
+							<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">As <a href="https://twitter.com/NASA?ref_src=twsrc%5Etfw">@NASA</a> searches for life on Mars, we lose the life of beloved Anthony Bourdain on Earth. Implicit and explicit reminders of how precious life is, anywhere in the universe.</p>&mdash; Neil deGrasse Tyson (@neiltyson) <a href="https://twitter.com/neiltyson/status/1005073555489460224?ref_src=twsrc%5Etfw">June 8, 2018</a></blockquote>
+							<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>							
+							<a class="waves-effect waves-light red darken-3 btn"><i class="material-icons left">chevron_left</i>Left</a>
+							<a class="waves-effect waves-light transparent z-depth-0 btn"><i class="material-icons right">chevron_right</i>Right</a>
+							<a class="waves-effect waves-light transparent z-depth-0 btn"><i class="material-icons right"></i>RighadadsadTaii</a>
+							<a class="waves-effect waves-light red darken-3 btn"><i class="material-icons right">chevron_right</i>Right</a>
+					</div>
+			</div>
 		<!-- <div class="start">
 			<img id="logo" width="75%" style="opacity:1;display: block;
     margin-left: auto;
     margin-right: auto;" height="15%" src="statefarm.png"/>
-		</div>
+		</div> -->
 	</body>	
 </html>
