@@ -12,7 +12,7 @@ function scrollTo(element, to, duration) {
     animateScroll();
 }
 Math.easeInOutQuad = function (t, b, c, d) {
-  t /= d/2;
+	t /= d/2;
 	if (t < 1) return c/2*t*t + b;
 	t--;
 	return -c/2 * (t*(t-2) - 1) + b;
@@ -25,31 +25,23 @@ function hello()
 }
 function right()
 {
-	if(index < bet.urls.length-1)
-		index++;
+	if(index < bet.urls.length-1) index++;
 	refreshTweet();
 }
 function left()
 {
-	if(index > 0)
-		index--;
+	if(index > 0) index--;
 	refreshTweet();
 }
 function refreshTweet()
 {
 	var myNode = document.getElementById("tweet");
-	while (myNode.firstChild) {
-	    myNode.removeChild(myNode.firstChild);
-	}
+	while (myNode.firstChild) myNode.removeChild(myNode.firstChild);
 	$("#tweet").append('<blockquote class="twitter-tweet" data-lang="en"><a href="'+bet.urls[index]+'"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></head>/script>');
 }
 function getTweets()
 {
-	console.log(bet);
 	var myNode = document.getElementById("tweet");
-	while (myNode.firstChild) {
-	    myNode.removeChild(myNode.firstChild);
-	}
-	console.log(bet.urls[0]);
+	while (myNode.firstChild) myNode.removeChild(myNode.firstChild);
 	$("#tweet").append('<blockquote class="twitter-tweet" data-lang="en"><a href="'+bet.urls[0]+'"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></head>/script>');
 }
