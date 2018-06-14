@@ -75,10 +75,18 @@ body
 	width: 45%;
 	z-index: -1;
 	position: absolute;
-	top:165%;
+	top:180%;
 	background-color: white;
 }
-::placeholder{
+::placeholder
+{
 	color: black;
 	opacity: .6;
+}
+#header
+{
+	width: 100%;
+	height: 85px;
+	position: absolute;
+	background-color: darkgrey;
 }

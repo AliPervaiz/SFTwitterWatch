@@ -12,7 +12,15 @@
 				datas = JSON.parse(string);
 				getTweets();
 			});
+			$("#form").submit(function(event){
+				event.preventDefault();
+				var str = $("#message").val();
+				var link = datas.urls[index]+"";
+				var number = link.substring(link.lastIndexOf("/")+1);
+				window.open("https://twitter.com/intent/tweet?in_reply_to="+number+"&text="+str,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+			});
 		});
+		
 	</script>
 	<script src="{{url_for('static',filename='js/home.js')}}"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,7 +30,7 @@
 	<title>hello</title>
 	<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
 </head>
-
+<!-- <div id="header" class=""><h4 class="center-align"></h4></div> -->
 <body>
 	<div class="video-container">
 		<video frameborder=0 autoplay muted loop>
@@ -61,9 +69,11 @@
 	</div>
 	<div class=row>
 			<div class="col s12 m6 center-align" id="InputField">
-					<form>
-						<input type="text" name="fname" placeholder="Your Response"><br>
-						<input type="submit" value="Submit">
+					<form id="form">
+						<input id="message" type="text" placeholder="Your Response"><br>
+						<button class="btn waves-effect waves-light red darken-4" type="submit" name="action">Submit<input type="submit" value="">
+								<i class="material-icons right">send</i>
+							</button>
 					</form>
 			</div>
 	</div>
