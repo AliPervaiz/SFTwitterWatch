@@ -13,18 +13,11 @@ def auth():
                       access_token_key=access_token,
                       access_token_secret=access_token_secret)
     return api
-		
-<<<<<<< HEAD
-def removeResponded(): #removes URLs listed in respondedurls.txt
-    respondedURLs = open(respondedurls, "r")
-    for tempURL in respondedURLs:
-        urls.remove(tempURL)
-=======
-def removeResponded(urls):
+
+def removeResponded(urls): #removes URLs listed in respondedurls.txt
     respondedURLs = open(responded, "r")
     for url in respondedURLs:
         urls.remove(url)
->>>>>>> 7790d0dd2f72a016014ea7c0122cabb178b16acc
 
 def getTweets():
     api = auth()
