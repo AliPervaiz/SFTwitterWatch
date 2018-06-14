@@ -4,7 +4,7 @@
   pip install python-twitter
 
 ## Hack Short Description
-A web app that facilitates communication between company and twitter critics, allowing State Farm to address complaints and improve response time.
+A web app that facilitates communication between company and critics, allowing State Farm to address complaints and improve response time.
 
 ## Hack Description (please include tools/tech you used)
 CHANGE THIS HOE
