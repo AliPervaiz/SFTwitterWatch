@@ -1,0 +1,70 @@
+.video-container
+{
+	top: 0; 
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	overflow: hidden;
+	position: absolute;
+}
+.video-container video 
+{
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.start
+{
+	background: rgba(0, 0, 0, 0.5);
+	width:50%;
+	height:50%;
+	position: absolute;
+	top:25%;
+	left:25%;
+}
+body
+{
+	padding:0; 
+	margin:0;
+	overflow: hidden; 
+}
+#buttonContainer
+{
+	top: 50%;
+	left: 50%;
+	margin-left: 20%;
+	margin-right: 20%;
+	position: relative;
+	opacity: 0.8;
+}
+#total
+{
+	position: relative;
+	top: 25%;
+	translate: translateY(-50%);
+}
+#secondaryCardRow
+{
+	margin-top:15px;
+}
+#tweetCard
+{
+	position:absolute;
+	top:125%;
+	left:30%;
+}
+#wrapper
+{
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	top: 100%;
+	background: linear-gradient(to top, black, red , black);
+}
