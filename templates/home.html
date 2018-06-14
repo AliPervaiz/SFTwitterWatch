@@ -15,6 +15,14 @@
 			$("#form").submit(function(event){
 				event.preventDefault();
 				var str = $("#message").val();
+				var res = str.split(" ");
+				var fixed = "";
+				for(var st = 0; st < res.length; st++)
+					fixed += "_" + res[st];
+				//alert(fixed);
+				$.get("/sentiment/" + fixed, function (data, status) {
+					alert(data * 1000 + " Points Earned!");
+				});	
 				var link = datas.urls[index]+"";
 				var number = link.substring(link.lastIndexOf("/")+1);
 				window.open("https://twitter.com/intent/tweet?in_reply_to="+number+"&text="+str,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
