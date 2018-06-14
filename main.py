@@ -29,15 +29,10 @@ def getTweets():
             try:
                 url = "https://twitter.com/" + tweet.user.screen_name+"/status/"+str(tweet.id)
                 urls.add(url)
-                print(url)
             except UnicodeEncodeError:
                 print("Could not add")
 
-    print(len(urls))
     removeResponded(urls)
-    print(len(urls))
     j = "{\"urls\": [\"" +  "\", \"".join(urls) + "\"]}"
-    j = json.loads(j)
+    #j = json.loads(j)
     return j
-
-getTweets()
