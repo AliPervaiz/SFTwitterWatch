@@ -23,17 +23,10 @@ for q in queries:
         except UnicodeEncodeError:
             print("Could not add")
 		
-<<<<<<< HEAD
-def removeResponded():
-    respondedIDs = open(responded, "r")
-    for tempID in respondedIDs:
-        urls.remove(tempID)
-=======
 def removeResponded(): #removes URLs listed in respondedurls.txt
     respondedURLs = open(respondedurls, "r")
     for tempURL in respondedURLs:
         urls.remove(tempURL)
->>>>>>> df8cdc21c51dff6894a34010aff7543023a533b7
 
 j = "{\"urls\": [\"" +  "\", \"".join(urls) + "\"]}"
 print(j)
