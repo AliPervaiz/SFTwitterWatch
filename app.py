@@ -2,16 +2,14 @@ from flask import Flask, render_template, url_for, request
 import main
 
 # IBM WATSON
+import json
 from watson_developer_cloud import NaturalLanguageUnderstandingV1
 from watson_developer_cloud.natural_language_understanding_v1 import Features, EntitiesOptions, KeywordsOptions
-import twitter_wrapper
 
 natural_language_understanding = NaturalLanguageUnderstandingV1(
-        username='a058b551-a067-48ad-9c08-3d57cb331a12',
-        password='nW4Q8XpczFc4',
-        version='2017-02-27')
-
-
+        username='cbc2f010-cc2a-437f-8add-8144b4bc2152',
+        password='3Y3QIC2KDBO2',
+        version='2018-03-16')
 
 app = Flask(__name__)
 
@@ -36,22 +34,35 @@ def sentiment(message):
     response = natural_language_understanding.analyze(
 
             text = message,
+            #text = "Hello how are youd doing today, because I am really tired but good",
 
-            features = Features(
+            features=Features(
+                entities=EntitiesOptions(
+                    emotion=True,
+                    sentiment=True,
+                    limit=2
+                    ),
                 keywords=KeywordsOptions(
                     emotion=True,
                     sentiment=True,
-                    limit=1)),
-                
-            language = 'en')
+                    limit=2
+                    )
+                )   
+           ) 
 
-    try:
-        data = json.loads(json.dumps(response, indent=2))
-    except:
-        pass
+    # return json.dumps(response, indent=2)
+    data = json.loads(json.dumps(response, indent=2))
+    # return json.dumps(response, indent=2)['keywords'][0]['sentiment']['score']
+    sentiment =data['keywords'][0]['emotion']['joy']
+    return str((sentiment))
+
+    # return data
+# ['keywords'][0]['sentiment']['score']
+     #   return data
+    # except:
+     #   return "test"
 
 
-    return data['keywords'][0]['sentiment']['score']
 
 
 
