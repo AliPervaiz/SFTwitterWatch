@@ -2,6 +2,7 @@
 
 ### Dependencies:
   pip install python-twitter
+  pip install watson-developer-cloud
 
 ## Hack Short Description
 A web app that facilitates communication between company and critics, allowing State Farm to address complaints and improve response time.
