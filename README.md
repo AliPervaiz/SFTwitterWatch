@@ -4,7 +4,7 @@
   pip install python-twitter
 
 ## Hack Short Description
-SF Twitter Watch was created to improve the relationship between our customers and State Farm. Public Relations Representatives constantly work to improve this relationship, leading us to create a tool that would better facilitate engagement between community and company
+State Farm has always put its customers first. We created SF Twitter Watch, a PR tool that facilitates communication between company and a disatisfied community, to uphold the very same value. SF Twitter Watch allows easy response to customers on twitter by PR, emphasizing customer relations.
 
 ## Hack Description (pleasee include tools/tech you used)
 
