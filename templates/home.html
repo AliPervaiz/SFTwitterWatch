@@ -1,44 +1,71 @@
 <html>
-	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="{{url_for('static',filename='js/home.js')}}"></script>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/materialize.min.css')}}"  media="screen,projection"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>hello</title>
-		<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
-	</head>
-	<body onload="getTweets()">
-		<div class="video-container">
-			<video frameborder=0 autoplay muted loop>
-				<source src="{{url_for('static',filename='media/video.mp4')}}" type="video/mp4">
-			</video>
-		</div>
-		<div id="total" class="row">
-			<div class="col s12 m6">
-				<div id="buttonContainer" class="card grey darken-4">
-					<div class="card-content white-text">
-						<img style="opacity:1; display:block; margin-left:auto; margin-right:auto;" width="60%" src="{{url_for('static',filename='media/statefarm.png')}}">
-						<p style="opacity:0">.</p>
-						<p style="opacity:0">.</p>
-						<p style="opacity:0">.</p>
-						<div class="card-action center-align">
-							<a onclick="hello()" class="waves-effect red darken-3 btn" style="opacity:2" href="#">Press me to begin!</a>
-						</div>
-						</div>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		var yay;
+		var datas;
+		$(document).ready(function () {
+			$.get("/tweets", function (data, status) {
+				yay = data;
+				var string = "" + yay;
+				datas = JSON.parse(string);
+				getTweets();
+			});
+		});
+	</script>
+	<script src="{{url_for('static',filename='js/home.js')}}"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/materialize.min.css')}}" media="screen,projection"
+	/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>hello</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+</head>
+
+<body>
+	<div class="video-container">
+		<video frameborder=0 autoplay muted loop>
+			<source src="{{url_for('static',filename='media/video.mp4')}}" type="video/mp4">
+		</video>
+	</div>
+	<div id="total" class="row">
+		<div class="col s12 m6">
+			<div id="buttonContainer" class="card grey darken-4">
+				<div class="card-content white-text">
+					<img style="opacity:1; display:block; margin-left:auto; margin-right:auto;" width="60%" src="{{url_for('static',filename='media/statefarm.png')}}">
+					<p style="opacity:0">.</p>
+					<p style="opacity:0">.</p>
+					<p style="opacity:0">.</p>
+					<div class="card-action center-align">
+						<a onclick="hello()" class="waves-effect red darken-3 btn" style="opacity:2" href="#">Press me to begin!</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="wrapper"></div>
-		<div class="row" id="tweetCard">
-			<div class="card z-depth-0 transparent col s16 m16">
+	</div>
+	</div>
+	<div id="wrapper"></div>
+	<div class="row" id="tweetCard">
+		<div class="card z-depth-0 transparent col s16 m16">
 			<div id="tweet"></div>
-				<a onclick="left()" class="waves-effect waves-light red darken-3 btn"><i class="material-icons left">chevron_left</i>Previous</a>
-				<a class="waves-effect waves-light transparent z-depth-0 btn"><i class="material-icons right">chevron_right</i>Right</a>
-				<a class="waves-effect waves-light transparent z-depth-0 btn"><i class="material-icons right"></i>Righadadsid</a>
-				<a onclick="right()" class="waves-effect waves-light red darken-3 btn"><i class="material-icons right">chevron_right</i>Next</a>
+			<a onclick="left()" class="waves-effect waves-light red darken-3 btn">
+				<i class="material-icons left">chevron_left</i>Previous</a>
+			<a class="waves-effect waves-light transparent z-depth-0 btn">
+				<i class="material-icons right">chevron_right</i>Right</a>
+			<a class="waves-effect waves-light transparent z-depth-0 btn">
+				<i class="material-icons right"></i>Righadadsid</a>
+			<a onclick="right()" class="waves-effect waves-light red darken-3 btn">
+				<i class="material-icons right">chevron_right</i>Next</a>
+		</div>
+	</div>
+	<div class=row>
+			<div class="col s12 m6 center-align" id="InputField">
+					<form>
+						<input type="text" name="fname" placeholder="Your Response"><br>
+						<input type="submit" value="Submit">
+					</form>
 			</div>
-		</div>	
-	</body>	
+	</div>
+</body>
 </html>

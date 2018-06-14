@@ -68,3 +68,17 @@ body
 	top: 100%;
 	background: white;
 }
+#InputField
+{
+	left: 28%;
+	height: 6%;
+	width: 45%;
+	z-index: -1;
+	position: absolute;
+	top:165%;
+	background-color: white;
+}
+::placeholder{
+	color: black;
+	opacity: .6;
+}
