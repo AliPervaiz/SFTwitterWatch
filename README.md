@@ -1,18 +1,15 @@
-# SF-TwitterWatch
+# SFTwitterWatch
 
-Dependencies:
+### Dependencies:
   pip install python-twitter
 
-Hack Short Description
-==========================
+## Hack Short Description
 
-Hack Description (pleasee include tools/tech you used)
-==========================
+## Hack Description (pleasee include tools/tech you used)
 
-Hack Source Control Link
-==========================
+
+## Hack Source Control Link
 https://github.com/AliPervaiz/hello
 
-Team Members
-=========================
+## Team Members
 Rick Zhang, Jess DeJong, Syed Pervaiz, Alex DeJong, Muhammad Khatri
