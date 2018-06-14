@@ -57,7 +57,7 @@ body
 {
 	position:absolute;
 	top:125%;
-	left:30%;
+	left:36%;
 }
 #wrapper
 {
@@ -66,5 +66,5 @@ body
 	z-index: -1;
 	position: absolute;
 	top: 100%;
-	background: linear-gradient(to top, black, red , black);
+	background: white;
 }
