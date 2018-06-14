@@ -17,7 +17,7 @@ def auth():
 def removeResponded(urls): #removes URLs listed in respondedurls.txt
     respondedURLs = open(responded, "r")
     for url in respondedURLs:
-        urls.remove(url)
+        urls.remove(url.replace("\n",""))
 
 def getTweets():
     api = auth()
@@ -29,10 +29,15 @@ def getTweets():
             try:
                 url = "https://twitter.com/" + tweet.user.screen_name+"/status/"+str(tweet.id)
                 urls.add(url)
+                print(url)
             except UnicodeEncodeError:
                 print("Could not add")
-    
-    removeResponded(urls)            
+
+    print(len(urls))
+    removeResponded(urls)
+    print(len(urls))
     j = "{\"urls\": [\"" +  "\", \"".join(urls) + "\"]}"
     j = json.loads(j)
     return j
+
+getTweets()
