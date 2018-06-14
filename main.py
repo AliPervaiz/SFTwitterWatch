@@ -27,7 +27,7 @@ def getTweets():
         search = api.GetSearch(q, count=50)
         for tweet in search:
             try:
-                url = "https://twitter.com/" + tweet.user.screen_name+"/status/"+str(tweet.id)
+                url = "https://twitter.com/" + tweet.user.screen_name+"/status/"+str(tweet.id_str)
                 urls.add(url)
             except UnicodeEncodeError:
                 print("Could not add")
