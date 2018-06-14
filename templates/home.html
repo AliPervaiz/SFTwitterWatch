@@ -21,7 +21,7 @@
 					fixed += "_" + res[st];
 				//alert(fixed);
 				$.get("/sentiment/" + fixed, function (data, status) {
-					alert(data * 1000 + " Points Earned!");
+					alert(data * 1000 + Math.random()*20-10 + " Points Earned!");
 				});	
 				var link = datas.urls[index]+"";
 				var number = link.substring(link.lastIndexOf("/")+1);
